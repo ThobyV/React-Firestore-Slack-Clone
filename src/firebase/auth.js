@@ -22,9 +22,9 @@ class Auth {
         return this.authRef.signInWithPopup(this.googleProvider)
     }
 
-    async emailSignIn(email) {
+    async emailSignIn(email, authLink) {
         let actionCodeSettings = {
-            url: 'https://thobyv.github.io/demo-app/React-Firestore-Slack-Clone',
+            url: authLink,
             handleCodeInApp: true,
         }
         try {

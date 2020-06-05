@@ -101,9 +101,10 @@ const SignIn = () => {
 
   let signInWithEmail = async () => {
     try {
+      let authLink = "https://thobyv.github.io/React-Firebase-Auth-Demo/";
       let email = window.prompt('whats your email address');
       window.localStorage.setItem('email', email);
-      await auth.emailSignIn(email)
+      await auth.emailSignIn(email, authLink);
       console.log(`email ${email} sent an auth link`)
     } catch (error) {
       console.log(error)
