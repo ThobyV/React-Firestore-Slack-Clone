@@ -19,12 +19,14 @@ const initialState = {
 // };
 
 const AuthProvider = ({ children }) => {
-    const [authUser, setAuthUser] = useState({});
+    const [authUser, setAuthUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const unsubscribe = auth.onAuthStateObserver(setAuthUser);
-        console.log(authUser.uid);
+        if (authUser){
+            console.log(authUser.uid);
+        }
         return () => unsubscribe();
     }, [authUser])
 

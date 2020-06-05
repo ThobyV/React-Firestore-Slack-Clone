@@ -1,7 +1,7 @@
 import firebase from 'firebase/app'
 
 firebase.initializeApp({
-  apiKey: "AIzaSyDRMj6aThDd-15EiRKwmGJOCp-dhomBVn4",
+  apiKey: process.env.REACT_APP_API_KEY,
   authDomain: "online-meetups-e955d.firebaseapp.com",
   databaseURL: "https://online-meetups-e955d.firebaseio.com",
   projectId: "online-meetups-e955d",
